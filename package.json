@@ -1,0 +1,52 @@
+{
+  "name": "@timkendrick/cl5-sdk",
+  "description": "Scripting toolkit for the CL5 animation tool",
+  "version": "0.1.0",
+  "author": "Tim Kendrick <timkendrick@gmail.com>",
+  "license": "Copyright (c) 2016 Tim Kendrick",
+  "main": "index.js",
+  "preferGlobal": true,
+  "bin": {
+    "cl5": "./bin/cl5"
+  },
+  "directories": {
+    "bin": "bin",
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "files": [
+    "index.js",
+    "bin",
+    "client",
+    "lib",
+    "template"
+  ],
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timkendrick/cl5-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/timkendrick/cl5-sdk/issues"
+  },
+  "homepage": "https://github.com/timkendrick/cl5-sdk",
+  "dependencies": {
+    "browser-sync": "^2.11.2",
+    "chokidar": "^1.4.3",
+    "clean": "^4.0.2",
+    "color-parser": "^0.1.0",
+    "del": "^2.2.0",
+    "glob": "^7.0.3",
+    "lodash.debounce": "^4.0.4",
+    "lodash.flatten": "^4.2.0",
+    "lodash.range": "^3.1.4",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "paper": "^0.9.25",
+    "pify": "^2.3.0",
+    "shutdown-handler": "^1.0.1",
+    "uuid": "^2.0.1"
+  }
+}

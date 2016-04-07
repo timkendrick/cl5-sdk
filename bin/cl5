@@ -1,0 +1,86 @@
+#!/usr/bin/env node
+'use strict';
+
+var path = require('path');
+var Cli = require('../lib/utils/cli');
+
+var pkg = require('../package.json');
+
+var cli = new Cli({
+	name: path.basename(__filename),
+	version: pkg.version,
+	description: 'CL5 animation scripting kit',
+	commands: {
+		'compile': {
+			description: 'Compile an animation to a script bundle',
+			input: true,
+			multiple: false,
+			options: [
+				{
+					name: 'output',
+					alias: 'o',
+					type: 'path',
+					required: false,
+					description: 'Output script to file path instead of stout'
+				},
+				{
+					name: 'secrets',
+					alias: 's',
+					type: 'boolean',
+					required: false,
+					description: 'Include achievement unlocker script in output'
+				}
+			],
+			'run': function(inputPath, options) {
+				var command = require('../lib/commands/compile');
+				return command(inputPath, options);
+			}
+		},
+		'preview': {
+			description: 'Preview an animation',
+			input: true,
+			multiple: true,
+			options: [
+				{
+					name: 'watch',
+					alias: 'w',
+					type: ['boolean', 'path'],
+					required: false,
+					description: 'Reload preview on source updates'
+				},
+				{
+					name: 'secrets',
+					alias: 's',
+					type: 'boolean',
+					required: false,
+					description: 'Include achievement unlocker script in output'
+				}
+			],
+			'run': function(inputPath, options) {
+				var command = require('../lib/commands/preview');
+				return command(inputPath, options);
+			}
+		}
+	},
+	options: [
+		{
+			name: 'help',
+			alias: null,
+			type: 'boolean',
+			required: false,
+			description: 'Output usage information'
+		},
+		{
+			name: 'version',
+			alias: null,
+			type: 'boolean',
+			required: false,
+			description: 'Output version number'
+		}
+	]
+});
+
+cli.process(process.argv)
+	.catch(error => {
+		process.exit(1);
+	});
