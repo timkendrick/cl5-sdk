@@ -41,9 +41,13 @@ Full usage instructions:
 
 ```bash
 cl5 --help
+```
 
+```bash
 cl5 compile --help
+```
 
+```bash
 cl5 preview --help
 ```
 
