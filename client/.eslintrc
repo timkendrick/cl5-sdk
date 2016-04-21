@@ -8,9 +8,11 @@
 		"browser": true
 	},
 	"rules": {
-		"no-unused-vars": [2, {
+		"no-unused-vars": ["error", {
 			"vars": "all",
 			"args": "none"
-		}]
+		}],
+		"semi": ["error", "always"],
+		"quotes": ["error", "single"]
 	}
 }
