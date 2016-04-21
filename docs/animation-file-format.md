@@ -272,8 +272,16 @@ Example `cursor` text effect:
 	"name": "cursor",
 	"offset": 10,
 	"duration": 30,
-	"options": null
+	"options": {
+		"cursor": "█",
+		"blinkDuration": 12
+	}
 }
 ```
 
-The `cursor` text effect takes no additional options.
+The `cursor` text effect takes the following options:
+
+| Name | Type | Required | Default | Description |
+| ---- | ---- | -------- | ------- | ----------- |
+| `cursor` | `string` | No | `"│"` | Cursor character to append to text |
+| `blinkDuration` | `number` | No | 15 | Duration of the on/off cursor blink cycle |
