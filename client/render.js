@@ -212,7 +212,7 @@ window.loadAnimation = function(animation) {
 						point: getOffsetPointDefinition(segmentDefinition.point, offset),
 						handleIn: getOffsetPointDefinition(segmentDefinition.handleIn, null),
 						handleOut: getOffsetPointDefinition(segmentDefinition.handleOut, null)
-					}
+					};
 				});
 
 

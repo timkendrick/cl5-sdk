@@ -6,7 +6,7 @@
 	const GIOCONDA_SOURCE_ELEMENT_ID = 'cl5';
 	const GIOCONDA_TARGET_ELEMENT_ID = 'rabbit';
 	const GIOCONDA_SOURCE_CLASS_INDEX = 1;
-	const COLOR_MATCHER_PALETTE = ["#4285F4", "#EA4235", "#FBBC05", "#34A853"];
+	const COLOR_MATCHER_PALETTE = ['#4285F4', '#EA4235', '#FBBC05', '#34A853'];
 
 	window.helloWorld();
 	window.hint();
@@ -45,7 +45,7 @@
 	function createColorMatcherFunction(colors) {
 		return function(hex) {
 			return findNearestColor(hex, colors);
-		}
+		};
 
 
 		function findNearestColor(hex, colors) {
