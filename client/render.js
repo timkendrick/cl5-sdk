@@ -27,6 +27,7 @@ window.loadAnimation = function(animation) {
 
 		function parseTextKeyframes(board, frames) {
 			const DEFAULT_TEXT_POSITION = { x: -266, y: 64 };
+			const DEFAULT_TEXT_SIZE = '12px';
 			const EDITOR_HANDLE_OFFSET = { x: 260, y: -24 };
 			return frames.map(frame => createTextKeyframe(frame));
 
@@ -35,7 +36,7 @@ window.loadAnimation = function(animation) {
 				const coordinates = getTextPosition(position);
 				return Object.assign({
 					timeMarker: time,
-					text: getFormattedText(text, style)
+					text: getFormattedText(text, Object.assign({ 'font-size': DEFAULT_TEXT_SIZE }, style))
 				}, coordinates);
 
 
