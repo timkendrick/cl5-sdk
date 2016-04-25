@@ -168,9 +168,9 @@ window.loadAnimation = function(animation) {
 					const keyframeProperties = stripNullValues(properties);
 					const hasPathUpdates = Boolean(keyframeProperties.path);
 					const state = (hasPathUpdates ? createPathState(shape, keyframeProperties.path) : clonePathState(sourceKeyframe.state));
-					const fillColor = keyframeProperties.fillColor;
-					const strokeColor = keyframeProperties.strokeColor;
-					const strokeWidth = keyframeProperties.strokeWidth;
+					const fillColor = keyframeProperties.fillColor || null;
+					const strokeColor = keyframeProperties.strokeColor || null;
+					const strokeWidth = keyframeProperties.strokeWidth || 0;
 					const handlesMoved = hasPathUpdates;
 					return new Keyframe(handlesMoved, timeOffset, state, fillColor, strokeColor, strokeWidth);
 
