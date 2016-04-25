@@ -103,4 +103,5 @@ Effect groups define animation effects that will be applied to any path elements
 - `"implode"` – Zoom the group out of shot using a 'warp' distortion effect
 - `"pulse"` – Add a "pulse" animation to the group
 - `"pop"` – Add a "bubble pop" animation to the group
+- `"judder"` – Make the group quiver repeatedly
 - `"jitter"` – Make the group shake uncontrollably
