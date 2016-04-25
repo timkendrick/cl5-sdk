@@ -45,7 +45,7 @@ window.loadAnimation = function(animation) {
 					const editorX = (window.w / 2) + position.x;
 					const editorY = (window.h / 2) + position.y;
 					const handleX = editorX + EDITOR_HANDLE_OFFSET.x;
-					const handleY = editorY + EDITOR_HANDLE_OFFSET.x;
+					const handleY = editorY + EDITOR_HANDLE_OFFSET.y;
 					return {
 						handleX: handleX,
 						handleY: handleY,
