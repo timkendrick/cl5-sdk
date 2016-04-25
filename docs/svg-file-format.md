@@ -99,6 +99,7 @@ Effect groups define animation effects that will be applied to any path elements
 - `"fadeout"` – Fade the group down to 100% opacity
 - `"animatein"` – Zoom the group into shot
 - `"animateout"` – Zoom the group out of shot
+- `"explode"` – Zoom the group into shot using a 'warp' distortion effect
 - `"pulse"` – Add a "pulse" animation to the group
 - `"pop"` – Add a "bubble pop" animation to the group
 - `"jitter"` – Make the group shake uncontrollably
