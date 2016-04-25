@@ -164,6 +164,7 @@ The following effects can be used in the `effects` field of a text frame:
 - `"typewriter"` – animate the text in, letter-by-letter
 - `"cursor"` – append a blinking cursor to the text
 - `"prepend"` – prepend a string to the start of the text
+- `"jitter"` – Make the text field shake uncontrollably
 
 Multiple text effects can be applied to a single text frame. The effects will be applied in the order they are defined in the `effects` array.
 
@@ -307,3 +308,26 @@ The `cursor` text effect takes the following options:
 | Name | Type | Required | Default | Description |
 | ---- | ---- | -------- | ------- | ----------- |
 | `text` | `string` | Yes | N/A | String to prepend to the text |
+
+#### `jitter` text effect
+
+Example `jitter` text effect:
+
+```json
+{
+	"name": "jitter",
+	"offset": 10,
+	"duration": 30,
+	"options": {
+		"amount": 10,
+		"increasing": true
+	}
+}
+```
+
+The `jitter` text effect takes the following options:
+
+| Name | Type | Required | Default | Description |
+| ---- | ---- | -------- | ------- | ----------- |
+| `amount` | `number` | Yes | N/A | Maximum number of pixels to offset the text |
+| `increasing` | `boolean` | No | `false` | Gradually increase the amount of jitter throughout the effect duration |

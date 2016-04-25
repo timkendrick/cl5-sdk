@@ -46,6 +46,7 @@
     "mkdirp": "^0.5.1",
     "paper": "^0.9.25",
     "pify": "^2.3.0",
+    "random-seed": "^0.3.0",
     "shutdown-handler": "^1.0.1",
     "uuid": "^2.0.1"
   }
