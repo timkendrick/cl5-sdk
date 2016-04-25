@@ -163,6 +163,7 @@ The following effects can be used in the `effects` field of a text frame:
 - `"fadeout"` – fade the text down to 0% opacity
 - `"typewriter"` – animate the text in, letter-by-letter
 - `"cursor"` – append a blinking cursor to the text
+- `"prepend"` – prepend a string to the start of the text
 
 Multiple text effects can be applied to a single text frame. The effects will be applied in the order they are defined in the `effects` array.
 
@@ -285,3 +286,24 @@ The `cursor` text effect takes the following options:
 | ---- | ---- | -------- | ------- | ----------- |
 | `cursor` | `string` | No | `"│"` | Cursor character to append to text |
 | `blinkDuration` | `number` | No | 15 | Duration of the on/off cursor blink cycle |
+
+#### `prepend` text effect
+
+Example `prepend` text effect:
+
+```json
+{
+	"name": "prepend",
+	"offset": 10,
+	"duration": 30,
+	"options": {
+		"text": "Hello, "
+	}
+}
+```
+
+The `cursor` text effect takes the following options:
+
+| Name | Type | Required | Default | Description |
+| ---- | ---- | -------- | ------- | ----------- |
+| `text` | `string` | Yes | N/A | String to prepend to the text |
