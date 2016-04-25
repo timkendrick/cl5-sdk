@@ -107,6 +107,7 @@ window.loadAnimation = function(animation) {
 
 
 			function createShape(board, shapeDefinition, drawOffset) {
+				const isBroken = Boolean(shapeDefinition.broken);
 				const fillColor = shapeDefinition.fillColor || 'rgba(0,0,0,0)';
 				const strokeColor = shapeDefinition.strokeColor || 'rgba(0,0,0,0)';
 				const strokeWidth = shapeDefinition.strokeWidth || 0;
@@ -119,7 +120,11 @@ window.loadAnimation = function(animation) {
 					shape.path.strokeWidth = strokeWidth;
 					shape.path.strokeW = strokeWidth;
 				}
+				if (isBroken) {
+					shape.broken = isBroken;
+				}
 				return shape;
+
 
 				function createPath(pathDefinition, drawOffset) {
 					const numSides = pathDefinition.length;
