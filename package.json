@@ -1,7 +1,7 @@
 {
   "name": "@timkendrick/cl5-sdk",
   "description": "Scripting toolkit for the CL5 animation tool",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Tim Kendrick <timkendrick@gmail.com>",
   "license": "Copyright (c) 2016 Tim Kendrick",
   "main": "index.js",
